@@ -9,10 +9,11 @@ server:
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/mall?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    #    &useSSL=false&serverTimezone=UTC
     username: root
-    password: root
+    password: admin
     hikari:
       connection-timeout: 30000 # 等待连接池分配连接的最大时长（毫秒），超时这个时长还没可用的连接则发生SQLException，默认：39秒
       minimum-idle: 5 # 最小连接数
